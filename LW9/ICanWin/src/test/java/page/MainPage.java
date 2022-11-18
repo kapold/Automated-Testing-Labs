@@ -72,6 +72,5 @@ public class MainPage {
 
     public void clickCreateNewPasteButton() {
         newPasteButton.click();
-        new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME_IN_SECONDS)).until(CustomCondition.changingURL(driver.getCurrentUrl()));
     }
 }

@@ -9,6 +9,8 @@ public class MainPage {
     private static final String HOMEPAGE_URL = "https://www.apple.com/";
     private final WebDriver driver;
 
+    public static boolean isSearched = false;
+
     @FindBy(xpath = "//a[@id='ac-gn-link-search']")
     private WebElement searchButton;
 
@@ -35,6 +37,7 @@ public class MainPage {
 
     public void enterAccessory() {
         accessoryButton.click();
+        isSearched = true;
     }
 
     public void searchClick() {

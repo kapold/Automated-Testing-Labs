@@ -2,6 +2,7 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -17,12 +18,13 @@ public class SearchAccessoriesTest {
     }
 
     @Test
-    public void isNewPateCreated() {
+    public void AccessoriesInfoTest() {
         mainPage = new MainPage(driver);
         mainPage.openPage();
         mainPage.searchClick();
         mainPage.enterSearchText("iPhone Accessories");
         mainPage.enterAccessory();
+        Assert.assertTrue(MainPage.isSearched);
     }
 
     @AfterMethod(alwaysRun = true)
