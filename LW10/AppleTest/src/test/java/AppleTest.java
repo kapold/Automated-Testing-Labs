@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -19,7 +20,9 @@ public class AppleTest {
 
     @Test
     public void AccessoriesInfoTest() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D://WebDriver//chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "D://WebDriver//chromedriver.exe");
+        WebDriverManager.chromedriver().browserVersion("107.0.5304.107").setup();
+        WebDriverManager.chromedriver().driverVersion("107.0.5304.107").setup();
 
         mainPage = new MainPage(driver);
         mainPage.openPage();
