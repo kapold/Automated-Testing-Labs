@@ -14,11 +14,12 @@ public class AppleTest {
     @BeforeMethod
     public void driverSetup() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @Test
     public void AccessoriesInfoTest() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:/WebDriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D://WebDriver//chromedriver.exe");
 
         mainPage = new MainPage(driver);
         mainPage.openPage();
