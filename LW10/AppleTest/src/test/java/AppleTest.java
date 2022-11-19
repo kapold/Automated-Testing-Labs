@@ -18,6 +18,8 @@ public class AppleTest {
 
     @Test
     public void AccessoriesInfoTest() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D:/WebDriver/chromedriver.exe");
+
         mainPage = new MainPage(driver);
         mainPage.openPage();
 
