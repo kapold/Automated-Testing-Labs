@@ -1,9 +1,15 @@
 package page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AddPage extends AbstractPage{
     @FindBy(xpath = "//div[@class='rc-dimension-selector-row form-selector']")
@@ -33,8 +39,9 @@ public class AddPage extends AbstractPage{
     @FindBy(xpath = "//button[@class='button button-block button-super'][@value='proceed']")
     private WebElement reviewBagButton;
 
-    @FindBy(xpath = "//button[@class='rf-saveditem-button']")
-    private WebElement listButton;
+//    @FindBy(xpath = "//button[@class='rf-saveditem-button']")
+//    private WebElement listButton;
+    // TODO: not interactable
 
 //    @FindBy(xpath = "//input[@id='newlist']")
 //    private WebElement newListButton;
@@ -105,9 +112,12 @@ public class AddPage extends AbstractPage{
         return new BagPage(driver);
     }
 
-    public void openList(){
-        listButton.click();
-    }
+//    public void openList(){
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("rf-saveditem-button")));
+//        wait.until(ExpectedConditions.elementToBeClickable(By.className("rf-saveditem-button")));
+//        listButton.click();
+//    }
 
 //    public void createNewList(){
 //        newListButton.click();

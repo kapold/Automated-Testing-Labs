@@ -29,13 +29,11 @@ public class MainPage extends AbstractPage{
         return this;
     }
 
-    // TEST 3
     public AddPage addIphone(){
         buyButton.click();
         return new AddPage(driver);
     }
 
-    // TEST 2
     public void searchClick() {
         searchButton.click();
     }
@@ -46,7 +44,6 @@ public class MainPage extends AbstractPage{
         return new SearchPage(driver);
     }
 
-    // TEST 4
     public SupportPage openSupport(){
         supportButton.click();
         return new SupportPage(driver);

@@ -51,7 +51,7 @@ public class AppleTests extends CommonConditions {
     }
 
     @Test(description = "Check iPhone for originality [TEST 5]")
-    public void checkForOriginality() throws InterruptedException {
+    public void checkForOriginality_TEST() throws InterruptedException {
         mainPage = new MainPage(driver);
         mainPage.openPage();
 
@@ -84,25 +84,25 @@ public class AppleTests extends CommonConditions {
         Assert.assertTrue(true);
     }
 
-//    @Test(description = "Create a list of saved products and add a couple to it [TEST 10]")
-//    public void addProductToList_TEST() throws InterruptedException {
-//        mainPage = new MainPage(driver);
-//        mainPage.openPage();
-//        Random random = new Random(100);
-//        addPage = mainPage.addIphone();
-//
-//        addPage.selectIPhone();
-//        addPage.selectColor();
-//        addPage.selectStorage();
-//        addPage.selectTradeIn();
-//        addPage.selectBuy();
-//        addPage.selectCarrier();
-//        addPage.selectAppleCare();
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    @Test(description = "Create a list of saved products and add a couple to it [TEST 10]")
+    public void addProductToList_TEST() throws InterruptedException {
+        mainPage = new MainPage(driver);
+        mainPage.openPage();
+        Random random = new Random(100);
+        addPage = mainPage.addIphone();
+
+        addPage.selectIPhone();
+        addPage.selectColor();
+        addPage.selectStorage();
+        addPage.selectTradeIn();
+        addPage.selectBuy();
+        addPage.selectCarrier();
+        addPage.selectAppleCare();
+
 //        addPage.openList();
 //        addPage.createNewList();
 //        addPage.submitNewList("list" + String.valueOf(random.nextInt()));
 //        addPage.showLists();
-//        Assert.assertTrue(true);
-//    }
+        Assert.assertTrue(true);
+    }
 }
